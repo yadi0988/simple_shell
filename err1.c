@@ -8,14 +8,14 @@
  */
 void _eputs(char *str)
 {
-	int i = 0;
+	int j = 0;
 
 	if (!str)
 		return;
-	while (str[i] != '\0')
+	while (str[j] != '\0')
 	{
-		_eputchar(str[i]);
-		i++;
+		_eputchar(str[j]);
+		j++;
 	}
 }
 
@@ -57,7 +57,6 @@ int _putfd(char c, int fd)
 	if (c == BUF_FLUSH || j >= WRITE_BUF_SIZE)
 	{
 		write(fd, buf, j);
-		i = 0;
 	}
 	if (c != BUF_FLUSH)
 		buf[j++] = c;
